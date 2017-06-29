@@ -113,7 +113,7 @@
             <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
             <ns4:type>Fasta_AA_Multi</ns4:type>
             <ns4:handling>FILE</ns4:handling>
-	    <ns4:option>phenotype /local/bibiserv/workingdir </ns4:option>
+	    <ns4:option>phenotype `pwd` </ns4:option>
             <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
 	    </ns4:input>
         <ns4:output id="dialign_output_aaalignment">
@@ -160,7 +160,7 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
                 <ns2:p>Nevertheless, it is still possible to use a threshold T, so it is up to the user to experience with this option.</ns2:p>
             </ns4:description>
             <ns4:type>int</ns4:type>
-            <ns4:option>from_nucleotides /local/bibiserv/workingdir -c </ns4:option>
+            <ns4:option>from_nucleotides `pwd` -c </ns4:option>
             <ns4:defaultValue>1</ns4:defaultValue>
             <ns4:min included="true">0.0</ns4:min>
             <ns4:max included="true">2.0</ns4:max>
