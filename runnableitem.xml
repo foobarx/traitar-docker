@@ -100,11 +100,11 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.9</ns4:version>
+        <ns4:version>1.0.10</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
-	    <ns4:path>/traitar</ns4:path>
+	    <ns4:path>/home/traitar/traitar/traitar/traitar</ns4:path>
             <ns4:callingInformation></ns4:callingInformation>
         </ns4:execInfo>
         <ns4:input id="dialign_input_aaalignment">
