@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.5</ns4:version>
+        <ns4:version>1.0.6</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -113,22 +113,10 @@
             <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
             <ns4:type>Fasta_AA_Multi</ns4:type>
             <ns4:handling>FILE</ns4:handling>
+	    <ns4:option>phenotype /local/bibiserv/workingdir </ns4:option>
             <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
         </ns4:input>
-        <ns4:output id="dialign_output_aaalignment">
-            <ns4:name xml:lang="en">AA alignment</ns4:name>
-            <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>
-            <ns4:description xml:lang="en">Multiples Amino Acid Alignment.</ns4:description>
-            <ns4:type>Fasta_AA_Alignment</ns4:type>
-            <ns4:handling>FILE</ns4:handling>
-            <ns4:option>-fa -fn </ns4:option>
-            <ns4:example></ns4:example>
-        </ns4:output>
-	<ns4:outputfile id="dialign_outputfile_aaalignment">
-		<ns4:name xml:lang="en">Output as Custom Format</ns4:name>
-		<ns4:filename>dialign_output_aaalignment.FILE</ns4:filename>
-		<ns4:contenttype>text/plain</ns4:contenttype>	
-	</ns4:outputfile>
+	    
         <ns4:param id="dialign_param_threshold">
             <ns4:name xml:lang="en">threshold</ns4:name>
             <ns4:shortDescription xml:lang="en">Threshold for fragments weights</ns4:shortDescription>
@@ -148,12 +136,19 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
                 <ns2:p>Nevertheless, it is still possible to use a threshold T, so it is up to the user to experience with this option.</ns2:p>
             </ns4:description>
             <ns4:type>int</ns4:type>
-            <ns4:option>-thr </ns4:option>
-            <ns4:defaultValue>0</ns4:defaultValue>
+            <ns4:option>from_nucleotides /local/bibiserv/workingdir -c </ns4:option>
+            <ns4:defaultValue>1</ns4:defaultValue>
             <ns4:min included="true">0.0</ns4:min>
-            <ns4:max included="true">10.0</ns4:max>
+            <ns4:max included="true">2.0</ns4:max>
             <ns4:guiElement>INPUTTEXT</ns4:guiElement>
         </ns4:param>
+	    
+	<ns4:outputfile id="dialign_outputfile_aaalignment">
+		<ns4:name xml:lang="en">Output as Custom Format</ns4:name>
+		<ns4:filename>dialign_output_aaalignment.FILE</ns4:filename>
+		<ns4:contenttype>text/plain</ns4:contenttype>	
+	</ns4:outputfile>
+	    
         <ns4:enumParam maxoccurs="1" minoccurs="1" id="dialign_enumparam_nucleicacidsequencehandling">
             <ns4:name xml:lang="en">nucleic acid sequence handling</ns4:name>
             <ns4:shortDescription xml:lang="en">nucleic acid sequence handling</ns4:shortDescription>
@@ -171,20 +166,19 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             </ns4:values>
             <ns4:guiElement>SELECTONERADIO</ns4:guiElement>
         </ns4:enumParam>
+	    
         <ns4:function id="dialign_function_aa">
             <ns4:name xml:lang="en">AA alignment</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>   
             <ns4:inputref ref="dialign_input_aa_sequences"/>
-            <ns4:outputref ref="dialign_output_aaalignment"/>
-	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>
             <ns4:paramGroup id="dialign_paramgroup_for_dialign_function_aa">
                 <ns4:description xml:lang="en"/>
                 <ns4:paramref ref="dialign_param_threshold"/>
-            </ns4:paramGroup>
+            </ns4:paramGroup>		
+	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>
             <ns4:paramAndInputOutputOrder>
+                <ns4:reference>dialign_input_aaalignment</ns4:reference>		    
                 <ns4:reference>dialign_param_threshold</ns4:reference>
-                <ns4:reference>dialign_output_aaalignment</ns4:reference>
-                <ns4:reference>dialign_input_aa_sequences</ns4:reference>
             </ns4:paramAndInputOutputOrder>
             <ns4:example>
                 <ns4:name>Dialign (AA) example</ns4:name>
