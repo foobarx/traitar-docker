@@ -107,8 +107,8 @@
 	    <ns4:path>/traitar</ns4:path>
             <ns4:callingInformation></ns4:callingInformation>
         </ns4:execInfo>
-        <ns4:input id="dialign_input_aa_sequences">
-            <ns4:name xml:lang="en">aa_sequences</ns4:name>
+        <ns4:input id="dialign_input_aaalignment">
+            <ns4:name xml:lang="en">aaalignment</ns4:name>
             <ns4:shortDescription xml:lang="en">aminoacid sequences</ns4:shortDescription>
             <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
             <ns4:type>Fasta_AA_Multi</ns4:type>
@@ -180,8 +180,8 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
         <ns4:function id="dialign_function_aa">
             <ns4:name xml:lang="en">AA alignment</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>   
-            <ns4:inputref ref="dialign_input_aa_sequences"/>
-            <ns4:outputref ref="dialign_output_aa_sequences"/>	
+            <ns4:inputref ref="dialign_input_aaalignment"/>
+            <ns4:outputref ref="dialign_output_aaalignment"/>	
 	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>		
             <ns4:paramGroup id="dialign_paramgroup_for_dialign_function_aa">
                 <ns4:description xml:lang="en"/>
@@ -194,7 +194,7 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             </ns4:paramAndInputOutputOrder>
             <ns4:example>
                 <ns4:name>Dialign (AA) example</ns4:name>
-                <ns4:prop idref="dialign_input_aa_sequences">PkhUTDINCkxEVEFQQ0xGU0RHU1BRS0FBWVZMV0RRVElMUVFESVRQTFBTSEVUSFNBUUtHRUxMQUxJ
+                <ns4:prop idref="dialign_input_aaalignment">PkhUTDINCkxEVEFQQ0xGU0RHU1BRS0FBWVZMV0RRVElMUVFESVRQTFBTSEVUSFNBUUtHRUxMQUxJ
 Q0dMUkFBS1BXUA0KU0xOSUZMRFNLWUxJS1lMSFNMQUlHQUZMR1RTQUhRVExRQUFMUFBMTFFHS1RJ
 WUxISFZSU0hUTkxQRFBJDQpTVEZORVlURFNMSUxBUEwNCj5NTUxWDQpQREFESFRXWVRER1NTTExR
 RUdRUktBR0FBVlRURVRFVklXQUtBTERBR1RTQVFSQUVMSUFMVFFBTEtNQUUNCkdLS0xOVllURFNS
