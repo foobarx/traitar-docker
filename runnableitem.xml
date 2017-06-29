@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:runnableItem xmlns:ns2="bibiserv:de.unibi.techfak.bibiserv.cms.microhtml" xmlns:ns3="bibiserv:de.unibi.techfak.bibiserv.cms.minihtml" xmlns:ns4="bibiserv:de.unibi.techfak.bibiserv.cms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dialign" xsi:schemaLocation="bibiserv:de.unibi.techfak.bibiserv.cms http://bibiserv.techfak.uni-bielefeld.de/xsd/bibiserv2/BiBiServAbstraction.xsd">
+<ns4:runnableItem xmlns:ns2="bibiserv:de.unibi.techfak.bibiserv.cms.microhtml" xmlns:ns3="bibiserv:de.unibi.techfak.bibiserv.cms.minihtml" xmlns:ns4="bibiserv:de.unibi.techfak.bibiserv.cms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="traitar" xsi:schemaLocation="bibiserv:de.unibi.techfak.bibiserv.cms http://bibiserv.techfak.uni-bielefeld.de/xsd/bibiserv2/BiBiServAbstraction.xsd">
     <ns4:name xml:lang="en">Traitar</ns4:name>
     
     <ns4:shortDescription xml:lang="en">Traitar short desc.</ns4:shortDescription>
@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.2</ns4:version>
+        <ns4:version>1.0.3</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
