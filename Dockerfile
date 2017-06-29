@@ -26,3 +26,5 @@ WORKDIR  /home/traitar/traitar
 RUN python setup.py sdist
 RUN pip install traitar  --find-links file:///home/traitar/traitar/dist
 RUN traitar pfam --local /home/traitar
+VOLUME /local/bibiserv/workingdir:/local/bibiserv/workingdir
+ENTRYPOINT /traitar
