@@ -103,7 +103,7 @@
         <ns4:version>1.0.0.</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
-            <ns4:image>foobarx/traitar-docker</ns4:image>
+            <ns4:image>traitar-docker</ns4:image>
 	    <ns4:path>/traitar</ns4:path>
             <ns4:callingInformation></ns4:callingInformation>
         </ns4:execInfo>
