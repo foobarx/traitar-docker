@@ -18,7 +18,7 @@ RUN mkdir /home/traitar
 RUN wget -O /home/traitar/Pfam-A.hmm.gz ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam27.0/Pfam-A.hmm.gz
 RUN gunzip /home/traitar/Pfam-A.hmm.gz 
 RUN sudo apt-get install -y parallel 
-ENV shell /bin/bash
+ENV SHELL /bin/bash
 WORKDIR  /home/traitar
 ADD https://www.random.org/strings/?num=16&len=16&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new uuid
 RUN git clone https://github.com/aweimann/traitar
