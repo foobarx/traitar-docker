@@ -160,7 +160,7 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
                 <ns2:p>Nevertheless, it is still possible to use a threshold T, so it is up to the user to experience with this option.</ns2:p>
             </ns4:description>
             <ns4:type>int</ns4:type>
-            <ns4:option>from_nucleotides `pwd` -c </ns4:option>
+            <ns4:option>from_nucleotides `pwd`/out -c </ns4:option>
             <ns4:defaultValue>1</ns4:defaultValue>
             <ns4:min included="true">0.0</ns4:min>
             <ns4:max included="true">2.0</ns4:max>
