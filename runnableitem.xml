@@ -139,8 +139,8 @@
 	</ns4:outputfile>
 	<ns4:outputfile id="dialign_outputfile_aaalignment_3">
 		<ns4:name xml:lang="en">heatmap_comb.pdf</ns4:name>
-		<ns4:filename>heatmap_comb.pdf</ns4:folder>
-		<ns4:folder>`pwd`/out/phenotype_prediction/</ns4:filename>		
+		<ns4:folder>`pwd`/out/phenotype_prediction/</ns4:folder>				
+		<ns4:filename>heatmap_comb.pdf</ns4:filename>
 		<ns4:contenttype>application/pdf</ns4:contenttype>	
 	</ns4:outputfile>
 	    
