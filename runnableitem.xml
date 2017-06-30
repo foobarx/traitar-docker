@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.10</ns4:version>
+        <ns4:version>1.0.11</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -127,18 +127,21 @@
         </ns4:output>
 	<ns4:outputfile id="dialign_outputfile_aaalignment_1">
 		<ns4:name xml:lang="en">gene_prediction</ns4:name>
-		<ns4:filename>gene_prediction</ns4:filename>
+		<ns4:folder>`pwd`/out/gene_prediction/</ns4:filename>		
+		<ns4:filename>joblog.txt</ns4:filename>
 		<ns4:contenttype>text/plain</ns4:contenttype>	
 	</ns4:outputfile>
 	<ns4:outputfile id="dialign_outputfile_aaalignment_2">
 		<ns4:name xml:lang="en">pfam_annotation</ns4:name>
-		<ns4:filename>pfam_annotation</ns4:filename>
+		<ns4:folder>`pwd`/out/phenotype_prediction/annotation/pfam/</ns4:filename>		
+		<ns4:filename>joblog_filter_and_aggregate.txt</ns4:filename>
 		<ns4:contenttype>text/plain</ns4:contenttype>	
 	</ns4:outputfile>
 	<ns4:outputfile id="dialign_outputfile_aaalignment_3">
-		<ns4:name xml:lang="en">heatmap_comb.png</ns4:name>
-		<ns4:filename>heatmap_comb.png</ns4:filename>
-		<ns4:contenttype>image/png</ns4:contenttype>	
+		<ns4:name xml:lang="en">heatmap_comb.pdf</ns4:name>
+		<ns4:filename>heatmap_comb.pdf</ns4:filename>
+		<ns4:folder>`pwd`/out/phenotype_prediction/</ns4:filename>		
+		<ns4:contenttype>application/pdf</ns4:contenttype>	
 	</ns4:outputfile>
 	    
         <ns4:param id="dialign_param_threshold">
