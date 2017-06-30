@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.12</ns4:version>
+        <ns4:version>1.0.13</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
