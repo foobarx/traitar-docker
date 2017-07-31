@@ -21,7 +21,7 @@ RUN sudo apt-get install -y parallel
 ENV SHELL /bin/bash
 WORKDIR  /home/traitar
 ADD https://www.random.org/strings/?num=16&len=16&digits=on&upperalpha=on&loweralpha=on&unique=on&format=plain&rnd=new uuid
-RUN git clone https://github.com/aweimann/traitar
+RUN git clone https://github.com/foobarx/traitar
 WORKDIR  /home/traitar/traitar
 RUN python setup.py sdist
 RUN pip install traitar  --find-links file:///home/traitar/traitar/dist
