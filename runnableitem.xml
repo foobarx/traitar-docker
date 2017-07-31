@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.21</ns4:version>
+        <ns4:version>1.0.22</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -113,7 +113,7 @@
             <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
             <ns4:type>ToolDependentRepresentation</ns4:type>
             <ns4:handling>FILE</ns4:handling>
-	    <ns4:option>input_archive </ns4:option>
+	    <ns4:option></ns4:option>
             <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
 	</ns4:input>
        <ns4:input id="dialign_input_aaalignment2">
@@ -131,7 +131,7 @@
             <ns4:description xml:lang="en">Multiples Amino Acid Alignment.</ns4:description>
             <ns4:type>ToolDependentRepresentation</ns4:type>
             <ns4:handling>FILE</ns4:handling>
-            <ns4:option>archive_type tar.gz mode from_genes out_archive </ns4:option>
+            <ns4:option>tar.gz from_genes </ns4:option>
             <ns4:example></ns4:example>
         </ns4:output>
 <!--	    
