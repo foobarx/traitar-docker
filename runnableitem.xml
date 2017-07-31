@@ -100,11 +100,11 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.20</ns4:version>
+        <ns4:version>1.0.21</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
-	    <ns4:path>/home/traitar/traitar/traitar/traitar_from_archive</ns4:path>
+	    <ns4:path>/home/traitar/traitar/bin/traitar_from_archive</ns4:path>
             <ns4:callingInformation></ns4:callingInformation>
         </ns4:execInfo>
         <ns4:input id="dialign_input_aaalignment">
@@ -134,7 +134,7 @@
             <ns4:option>archive_type tar.gz mode from_genes out_archive </ns4:option>
             <ns4:example></ns4:example>
         </ns4:output>
-<!--	 
+<!--	    
         <ns4:output id="dialign_output_aaalignment2">
             <ns4:name xml:lang="en">AA alignment2</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>
@@ -150,16 +150,13 @@
 		<ns4:folder>`pwd`/out/gene_prediction/</ns4:folder>		
 	    <ns4:filename>blah.zip</ns4:filename>
 	    <ns4:contenttype>archive/zip</ns4:contenttype>			
-
 	    </ns4:outputfile>
-<!--	   
 	<ns4:outputfile id="dialign_outputfile_aaalignment2">
 		<ns4:name xml:lang="en">gene_prediction2</ns4:name>
 		<ns4:folder>`pwd`/out/gene_prediction/</ns4:folder>		
 	    <ns4:filename>heatmap.png</ns4:filename>
 	    <ns4:contenttype>image/pdf</ns4:contenttype>			
 	    </ns4:outputfile>	  	   
--->
         <ns4:param id="dialign_param_threshold">
             <ns4:name xml:lang="en">threshold</ns4:name>
             <ns4:shortDescription xml:lang="en">Threshold for fragments weights</ns4:shortDescription>
@@ -213,6 +210,7 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
 	    <ns4:inputref ref="dialign_input_aaalignment2"/>			
             <ns4:outputref ref="dialign_output_aaalignment"/>	
 	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>	
+	<ns4:outputfileref ref="dialign_outputfile_aaalignment2"/>			
 <!--			
 	    <ns4:outputref ref="dialign_output_aaalignment2"/>		
 <ns4:outputfileref ref="dialign_outputfile_aaalignment2"/>		    					
