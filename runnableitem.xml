@@ -116,6 +116,15 @@
 	    <ns4:option>input_archive </ns4:option>
             <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
 	</ns4:input>
+       <ns4:input id="dialign_input_aaalignment2">
+            <ns4:name xml:lang="en">aaalignment2</ns4:name>
+            <ns4:shortDescription xml:lang="en">aminoacid sequences2</ns4:shortDescription>
+            <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
+            <ns4:type>ToolDependentRepresentation</ns4:type>
+            <ns4:handling>FILE</ns4:handling>
+	    <ns4:option>--sample2cat </ns4:option>
+            <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
+	</ns4:input>	    
         <ns4:output id="dialign_output_aaalignment">
             <ns4:name xml:lang="en">AA alignment</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>
@@ -124,7 +133,6 @@
             <ns4:handling>FILE</ns4:handling>
             <ns4:option>archive_type tar.gz mode from_genes out_archive </ns4:option>
             <ns4:example></ns4:example>
- 	    <ns4:folder>`pwd`/out/gene_prediction/</ns4:folder>		
 	    <ns4:filename>heatmap.png</ns4:filename>
 	    <ns4:contenttype>image/pdf</ns4:contenttype>			
         </ns4:output>
@@ -159,15 +167,7 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             <ns4:max included="true">2.0</ns4:max>
             <ns4:guiElement>INPUTTEXT</ns4:guiElement>
         </ns4:param>
-        <ns4:input id="dialign_input_aaalignment2">
-            <ns4:name xml:lang="en">aaalignment2</ns4:name>
-            <ns4:shortDescription xml:lang="en">aminoacid sequences2</ns4:shortDescription>
-            <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
-            <ns4:type>ToolDependentRepresentation</ns4:type>
-            <ns4:handling>FILE</ns4:handling>
-	    <ns4:option>--sample2cat </ns4:option>
-            <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
-	</ns4:input>
+ 
 	    
 	    
         <ns4:enumParam maxoccurs="1" minoccurs="1" id="dialign_enumparam_nucleicacidsequencehandling">
@@ -192,9 +192,9 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             <ns4:name xml:lang="en">AA alignment</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>   
             <ns4:inputref ref="dialign_input_aaalignment"/>
+	    <ns4:inputref ref="dialign_input_aaalignment2"/>	
             <ns4:outputref ref="dialign_output_aaalignment"/>	
-	    <ns4:outputfileref ref="dialign_outputfile_aaalignment_1"/>					
-            <ns4:inputref ref="dialign_input_aaalignment2"/>		
+	    <ns4:outputfileref ref="dialign_outputfile_aaalignment_1"/>						
             <ns4:paramGroup id="dialign_paramgroup_for_dialign_function_aa">
                 <ns4:description xml:lang="en"/>
                 <ns4:paramref ref="dialign_param_threshold"/>
