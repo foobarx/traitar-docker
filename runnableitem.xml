@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.19</ns4:version>
+        <ns4:version>1.0.20</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -210,9 +210,9 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             <ns4:name xml:lang="en">AA alignment</ns4:name>
             <ns4:shortDescription xml:lang="en">multiples amino acid alignment</ns4:shortDescription>   
             <ns4:inputref ref="dialign_input_aaalignment"/>		
+	    <ns4:inputref ref="dialign_input_aaalignment2"/>			
             <ns4:outputref ref="dialign_output_aaalignment"/>	
 	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>	
-	    <ns4:inputref ref="dialign_input_aaalignment2"/>		
 <!--			
 	    <ns4:outputref ref="dialign_output_aaalignment2"/>		
 <ns4:outputfileref ref="dialign_outputfile_aaalignment2"/>		    					
