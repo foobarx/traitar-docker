@@ -26,4 +26,4 @@ WORKDIR  /home/traitar/traitar
 RUN python setup.py sdist
 RUN pip install traitar  --find-links file:///home/traitar/traitar/dist
 RUN traitar pfam --local /home/traitar
-ENTRYPOINT /home/traitar/traitar/traitar/traitar
+ENTRYPOINT /home/traitar/traitar/bin/traitar_from_archive
