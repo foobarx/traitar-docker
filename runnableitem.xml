@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.27</ns4:version>
+        <ns4:version>1.0.28</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -153,7 +153,7 @@
 	<ns4:outputfile id="dialign_outputfile_aaalignment2">
 		<ns4:name xml:lang="en">anything2</ns4:name>
 	    <ns4:filename>dialign_output_aaalignment2.FILE</ns4:filename>
-	    <ns4:contenttype>application/gzip</ns4:contenttype>			
+	    <ns4:contenttype>application/pdf</ns4:contenttype>			
 	    </ns4:outputfile>	  	   
 <!--	    
 	<ns4:outputfile id="dialign_outputfile_aaalignment2">
