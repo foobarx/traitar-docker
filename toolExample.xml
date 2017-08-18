@@ -1,8 +1,5 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
-  <!--
-  <command>cd /home/gary/git/galaxy/tools/traitar/traitar/traitar ; /home/gary/git/galaxy/tools/traitar/traitar/bin/traitar_from_archive $input tar.gz from_genes $output -c 2 --sample2cat $input2 --output_image $output2 --heatmap_format png 2> /dev/null </command>
-  -->
   <command>docker run --memory 4096m --cpuset-cpus 1 --entrypoint='/home/traitar/traitar/bin/traitar_from_archive' -v /home/gary/git/galaxy/database/files:/home/gary/git/galaxy/database/files:rw local/traitar:2.2.1 $input tar.gz from_genes $output -c 2 --sample2cat $input2 --output_image $output2 --heatmap_format png 2>/dev/null</command>
   <inputs>
     <param format="tar" name="input" type="data" label="Source file"/>
