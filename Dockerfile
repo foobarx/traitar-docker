@@ -6,6 +6,9 @@
 # Set the base image to use to Ubuntu
 FROM ubuntu:trusty 
 
+ENV http_proxy http://rzproxy.helmholtz-hzi.de:3128
+ENV https_proxy http://rzproxy.helmholtz-hzi.de:3128
+
 RUN apt-get update
 MAINTAINER Aaron Weimann (weimann@hhu.de)
 RUN apt-get -y install python-scipy python-matplotlib python-pip python-pandas
