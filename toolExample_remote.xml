@@ -1,0 +1,17 @@
+<tool id="Traitar" name="Traitar" version="2.2.1">
+  <description>for each sequence in a file</description>
+  <command>ssh phobos-util-03.bifo.helmholtz-hzi.de traitar $input $output $input2 $output2</command>
+  <inputs>
+    <param format="tar" name="input" type="data" label="Source file"/>
+    <param format="txt" name="input2" type="data" label="Sample file"/>
+  </inputs>
+  <outputs>
+    <data format="tar.gz" name="output" />
+    <data format="png" name="output2" />
+  </outputs>
+
+  <help>
+This tool computes GC content from a FASTA file.
+  </help>
+
+</tool>
