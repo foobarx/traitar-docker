@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.34</ns4:version>
+        <ns4:version>1.0.35</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -215,8 +215,6 @@ between DIALIGN 2 and the first version of the program.</ns2:p>
             <ns4:outputref ref="dialign_output_aaalignment"/>	
 	    <ns4:outputfileref ref="dialign_outputfile_aaalignment"/>	
 	<ns4:outputfileref ref="dialign_outputfile_aaalignment2"/>				
-	    <ns4:outputref ref="dialign_output_aaalignment2"/>		
-<ns4:outputfileref ref="dialign_outputfile_aaalignment2"/>		    					
             <ns4:paramGroup id="dialign_paramgroup_for_dialign_function_aa">
                 <ns4:description xml:lang="en"/>
                 <ns4:paramref ref="dialign_param_threshold"/>
