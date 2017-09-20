@@ -100,7 +100,7 @@
    </ns4:references>
     
     <ns4:executable>
-        <ns4:version>1.0.37</ns4:version>
+        <ns4:version>1.0.38</ns4:version>
         <ns4:execInfo>
             <ns4:executableType>docker</ns4:executableType>
             <ns4:image>traitar-docker</ns4:image>
@@ -122,7 +122,7 @@
             <ns4:description xml:lang="en">A set of amino acid sequences to be aligned.</ns4:description>
             <ns4:type>ToolDependentRepresentation</ns4:type>
             <ns4:handling>FILE</ns4:handling>
-	    <ns4:option>--heatmap_format png --sample2cat </ns4:option>
+	    <ns4:option>--output_image heatmap_combined.png --heatmap_format png --sample2cat </ns4:option>
             <ns4:example>PnByb3RlaW5fMApXWVJQRFREQ1ZQQ1FLTUxWS1RUU0RIUVFLWUFDUElMUlRXVlBQVFdRR0tBR0FUV0RTS1ZZRlFHV1lXUENNSU5MVkNDTVBITFNMUUROSExOVEhXCj5wcm90ZWluXzEKRUhMUU1DVktZUlJXRVlFTkNBUFNHTk5OVFlHUVZFTElQVEhNU0xFV01SU0hBVllGSUVNTUNGSFBEQ1FZV0lHWU5FQVlDVFJRQUtMSFZNQVNMTVNSVAo+cHJvdGVpbl8yCldRSURTR1NMV1ZORURBRVBSV0FUSEhGU0dBVlZQRFdOTExIUldWSENQUkhLU05GTVRWSFlGR1FNRVNDS0tQTUFFV0hEREhQU1lRTUdSUUNLRkNQRlRERwo+cHJvdGVpbl8zClNNTVNLQ1JGQUlFVklTRkxFTk1EVExZQVlQWVBQVEZQRklQTlJISUlJVFdRUlZITU1ETVJORFZJQ1lNSURMSUZQWUhITkVEVFFQU1FMRVlXSwo+cHJvdGVpbl80CkZRTFRIV0lWS0VDUVJLRkFTWUhBSFlJTFZOTVFTVk1RSFZRUVZGWUlJS0FMRktXVENWRlRJR0ZXRFdUSFZMVllFRkNSUFBXR1lDVFJIR1ZUUUUK</ns4:example>
 	</ns4:input>	    
         <ns4:output id="dialign_output_aaalignment">
@@ -143,7 +143,6 @@
 
 	<ns4:outputfile id="dialign_outputfile_aaalignment2">
 		<ns4:name xml:lang="en">anything2</ns4:name>
-		<ns4:folder>`pwd`/traitar_out/phenotype_prediction/</ns4:folder>		
 	    <ns4:filename>heatmap_combined.png</ns4:filename>
 	    <ns4:contenttype>image/png</ns4:contenttype>			
 	    </ns4:outputfile>	  	   
