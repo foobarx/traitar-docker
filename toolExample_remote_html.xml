@@ -1,6 +1,6 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
-  <command>/home/galaxy/submit.sh traitar $input $input2 $html_file $html_file.files_path</command>
+  <command>/home/galaxy/submit.sh traitar_html $input $input2 $html_file $html_file.files_path</command>
   <inputs>
     <param format="tar" name="input" type="data" label="Source file"/>
     <param format="txt" name="input2" type="data" label="Sample file"/>
