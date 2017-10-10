@@ -1,0 +1,16 @@
+<tool id="Traitar" name="Traitar" version="2.2.1">
+  <description>for each sequence in a file</description>
+  <command>/home/galaxy/submit.sh traitar $input $input2 $html_file $html_file.files_path</command>
+  <inputs>
+    <param format="tar" name="input" type="data" label="Source file"/>
+    <param format="txt" name="input2" type="data" label="Sample file"/>
+  </inputs>
+  <outputs>
+    <data format="html" name="html_file" label="traitar_output.html" />
+  </outputs>
+
+  <help>
+This tool computes GC content from a FASTA file.
+  </help>
+
+</tool>
