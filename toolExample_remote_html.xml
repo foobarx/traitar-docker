@@ -1,6 +1,7 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
   <command><![CDATA[
+    #set x=0
     /home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
     #for $input_part in $input:
     #if x == 1:
