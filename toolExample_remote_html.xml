@@ -1,16 +1,15 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
   <command><![CDATA[
-    #for $input_part in $input:
     /home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
-    '$input_part.element_identifier',
-    #end for#
-]]></command>
-  
-      #for $input in $input1#
-    echo '$input.element_identifier' >> 'output1';
-#end for#
-  
+    #for $input_part in $input:
+    #if x == 1:
+      ,
+    #end if#
+    '$input_part.element_identifier'
+    #set x=1
+    #end for
+]]></command>  
   <inputs>
     <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
     <param format="txt" name="input2" type="data" label="Sample file"/>
