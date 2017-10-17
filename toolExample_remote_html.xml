@@ -2,7 +2,7 @@
   <description>for each sequence in a file</description>
   <command>/home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"</command>
   <inputs>
-    <param format="sdf" name="input" type="data" label="Source file" multiple="true"/>    
+    <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
     <param format="txt" name="input2" type="data" label="Sample file"/>
   </inputs>
   <outputs>
