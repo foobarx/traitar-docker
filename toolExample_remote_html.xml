@@ -1,7 +1,7 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
   <command><![CDATA[
-/home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}" ${input2.datatype}
+/home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}" ${input2.files_path}
 ]]></command>
   <inputs>
     <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
