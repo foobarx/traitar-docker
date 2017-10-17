@@ -1,15 +1,15 @@
 <tool id="Traitar" name="Traitar" version="2.2.1">
   <description>for each sequence in a file</description>
   <command><![CDATA[
-    #set x=0
+    #set $name_string=''
     /home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
     #for $input_part in $input:
-    #if x == 1:
-      ,
-    #end if#
-    '$input_part.element_identifier'
-    #set x=1
+    #if $name_string != '':
+    #set $name_string += ','
+    #end if
+    #set $name_string += $input_part.element_identifier
     #end for
+    $name_string
 ]]></command>  
   <inputs>
     <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
