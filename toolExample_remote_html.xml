@@ -13,7 +13,7 @@
 ]]></command>  
   <inputs>
     <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
-    <param format="txt" name="input2" type="data" label="Sample file" optional="true"/>
+    <param format="tabular" name="input2" type="data" label="Sample file" optional="true"/>
   </inputs>
   <outputs>
     <data format="html" name="html_file" label="traitar_output.html" />
