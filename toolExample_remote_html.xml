@@ -16,7 +16,7 @@
     <param format="tabular" name="input2" type="data" label="Sample file" optional="true"/>
   </inputs>
   <outputs>
-    <data format="html" name="html_file" label="traitar_output.html" />
+    <data format="html" name="html_file" label="Traitar output" />
   </outputs>
 
   <help>
