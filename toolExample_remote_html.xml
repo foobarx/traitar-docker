@@ -2,7 +2,7 @@
   <description>for each sequence in a file</description>
   <command><![CDATA[
     #set $name_string=''
-    /home/galaxy/submit.sh traitar_html $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
+    /home/galaxy/submit.sh traitar_html $mode $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
     #for $input_part in $input:
     #if $name_string != '':
     #set $name_string += ','
