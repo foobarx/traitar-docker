@@ -12,14 +12,29 @@
     $name_string
 ]]></command>  
   <inputs>
-    <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
-    <param format="tabular" name="input2" type="data" label="Sample file" optional="true"/>
+  <param name="mode" type="select" label="Mode">
+            <option value="from_genes" selected="True">from_genes</option>
+            <option value="from_nucleotides">from_nucleotides</option>
+        </param>
+  <conditional name="input_type">
+    <param name="input_type_selector" type="select" label="Choose the source input method">
+        <option value="collection" selected="True">Collection</option>
+        <option value="multiple">Multiple</option>
+    </param>
+    <when value="collection">
+      <param format="fasta" name="input" type="data_collection" label="Source file"/> 
+    </when>
+    <when value="multiple">
+      <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
+    </when>
+</conditional>
+<param format="tabular" name="input2" type="data" label="Sample file" optional="true"/>
+
   </inputs>
   <outputs>
     <data format="html" name="html_file" label="Traitar output" />
   </outputs>
-
-  <help>
+<help>
 This tool computes GC content from a FASTA file.
   </help>
 
