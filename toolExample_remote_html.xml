@@ -1,9 +1,9 @@
-<tool id="Traitar" name="Traitar" version="2.2.1">
-  <description>for each sequence in a file</description>
-  <command><![CDATA[
+<tool id="Traitar" name="Traitar,the microbial trait analyzer." version="2.2.1">
+  <description> This is the Traitar web service for phenotyping bacteria based on their genome sequences.</description>
+  <command detect_errors="exit_code"><![CDATA[
     #set $name_string=''
-    /home/galaxy/submit.sh traitar_html $mode $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
-    #for $input_part in $input:
+    /home/galaxy/submit.sh traitar_html $mode $email $html_file $html_file.files_path $input2 "${",".join(map(str, $input_type.input))}"
+    #for $input_part in $input_type.input:
     #if $name_string != '':
     #set $name_string += ','
     #end if
@@ -12,30 +12,104 @@
     $name_string
 ]]></command>  
   <inputs>
-  <param name="mode" type="select" label="Mode">
-            <option value="from_genes" selected="True">from_genes</option>
-            <option value="from_nucleotides">from_nucleotides</option>
+  <param name="mode" type="select" label="Please choose whether your input FASTA files contain amino acid or nucleotide sequences.">
+            <option value="from_genes" selected="True">Genes</option>
+            <option value="from_nucleotides">Nucleotides</option>
         </param>
-  <conditional name="input_type">
-    <param name="input_type_selector" type="select" label="Choose the source input method">
-        <option value="collection" selected="True">Collection</option>
-        <option value="multiple">Multiple</option>
-    </param>
-    <when value="collection">
-      <param format="fasta" name="input" type="data_collection" label="Source file"/> 
-    </when>
-    <when value="multiple">
-      <param format="fasta" name="input" type="data" label="Source file" multiple="true"/>    
-    </when>
-</conditional>
-<param format="tabular" name="input2" type="data" label="Sample file" optional="true"/>
-
+      <param format="fasta" name="input" type="data" label="Input FASTA files (multiple individual file or a Galaxy Dataset Collection)" multiple="true"/>    
+<param format="tabular" name="input2" type="data" label="Mapping file (optional)" optional="true" multiple="false"/>
+<param name="email" size="30" type="text" label="Email address for job notifications (optional)"/>
   </inputs>
   <outputs>
     <data format="html" name="html_file" label="Traitar output" />
   </outputs>
-<help>
-This tool computes GC content from a FASTA file.
-  </help>
+    <help><![CDATA[
 
+
+Todo:
+Email
+Remove more links
+Front page.
+copy image files
+
+Instructions
+------------
+
+- .. figure:: /static/images/traitar/Screenshot_1.png
+
+      Upload FASTA files using the Get Data | Upload File link on the left-hand pane.
+
+- .. figure:: /static/images/traitar/Screenshot_6_fix.png
+
+      Multiple files can be selected using 'Choose local file' and then uploaded with 'Start'
+
+
+- .. figure:: /static/images/traitar/Screenshot_7.png
+
+      These will then appear on the right-hand pane.
+
+- FASTA files should be x,y,z. Samples can be found at https://galaxy.bifo.helmholtz-hzi.de/static/images/traitar/1457190.3.RefSeq.faa and https://galaxy.bifo.helmholtz-hzi.de/static/images/traitar/525367.9.RefSeq.faa
+
+
+- Upload a sample file (process as per FASTA files). This file should be x. Sample can be found at https://galaxy.bifo.helmholtz-hzi.de/static/images/traitar/samples.txt
+
+- .. figure:: /static/images/traitar/Screenshot_8_fix.png
+
+     Optionally, uploaded FASTA files can be grouped together into a Galaxy Dataset Collection, so that can easily be processed together. This is done by clicking the checkbox icon on the right-hand pane, and then selecting each desired FASTA file using it's own checkbox. Once the selections have been made, choose 'Build Dataset List' from the dropdown, providing a meaningful name.
+
+- .. figure:: /static/images/traitar/Screenshot_2_fix.png
+
+     Choose either 'genes' or 'nucleotides' depending on the content of the FASTA files.
+
+- .. figure:: /static/images/traitar/Screenshot_3_fix.png
+
+     If a Galaxy Dataset Collection was created above, it should already be selected, or a different one chosen. The icon group to the left allows multiple FASTA files to be selected directly. When selecting multiple files, use the Ctrl (Strg) key before clicking.
+
+- .. figure:: /static/images/traitar/Screenshot_4_fix.png
+
+     If using a sample file, select it here. Otherwise, this can be left at 'None selected'.
+
+- .. figure:: /static/images/traitar/Screenshot_11_fix.png
+
+     Optionally an email can be provided which will send a notification when the job has completed.
+
+- .. figure:: /static/images/traitar/Screenshot_5.png
+
+     Finally, submit the job. 
+
+- .. figure:: /static/images/traitar/Screenshot_9.png
+
+     A new entry will appear on the right-hand pane. Initially, this will be gray, and will then turn yellow as processing starts. A successfully completed job will then turn green, a failed job red.
+
+- .. figure:: /static/images/traitar/Screenshot_9_fix.png
+
+     The contents of the job can be viewed by clicking on the eye icon in the job. 
+
+- .. figure:: /static/images/traitar/Screenshot_10_fix.png
+
+     The heatmap will then be shown, and an archive can be downloaded containing all the output.
+
+- In case of any issues, problems, or suggestions please get in touch. We are looking forward to your feedback: bifo-software@helmholtz-hzi.de.
+
+- Traitar can also be downloaded and run locally. For more information visit https://github.com/hzi-bifo/traitar
+
+- The Traitar software is published under the GNU GPLv3.
+
+    ]]></help>
+<citations>
+   <citation type="bibtex">@article {Weimanne00101-16,
+	author = {Weimann, Aaron and Mooren, Kyra and Frank, Jeremy and Pope, Phillip B. and Bremges, Andreas and McHardy, Alice C.},
+	editor = {Segata, Nicola},
+	title = {From Genomes to Phenotypes: Traitar, the Microbial Trait Analyzer},
+	volume = {1},
+	number = {6},
+	year = {2016},
+	doi = {10.1128/mSystems.00101-16},
+	publisher = {American Society for Microbiology Journals},
+	abstract = {The number of sequenced genomes is growing exponentially, profoundly shifting the bottleneck from data generation to genome interpretation. Traits are often used to characterize and distinguish bacteria and are likely a driving factor in microbial community composition, yet little is known about the traits of most microbes. We describe Traitar, the microbial trait analyzer, which is a fully automated software package for deriving phenotypes from a genome sequence. Traitar provides phenotype classifiers to predict 67 traits related to the use of various substrates as carbon and energy sources, oxygen requirement, morphology, antibiotic susceptibility, proteolysis, and enzymatic activities. Furthermore, it suggests protein families associated with the presence of particular phenotypes. Our method uses L1-regularized L2-loss support vector machines for phenotype assignments based on phyletic patterns of protein families and their evolutionary histories across a diverse set of microbial species. We demonstrate reliable phenotype assignment for Traitar to bacterial genomes from 572 species of eight phyla, also based on incomplete single-cell genomes and simulated draft genomes. We also showcase its application in metagenomics by verifying and complementing a manual metabolic reconstruction of two novel Clostridiales species based on draft genomes recovered from commercial biogas reactors. Traitar is available at https://github.com/hzi-bifo/traitar.IMPORTANCE Bacteria are ubiquitous in our ecosystem and have a major impact on human health, e.g., by supporting digestion in the human gut. Bacterial communities can also aid in biotechnological processes such as wastewater treatment or decontamination of polluted soils. Diverse bacteria contribute with their unique capabilities to the functioning of such ecosystems, but lab experiments to investigate those capabilities are labor-intensive. Major advances in sequencing techniques open up the opportunity to study bacteria by their genome sequences. For this purpose, we have developed Traitar, software that predicts traits of bacteria on the basis of their genomes. It is applicable to studies with tens or hundreds of bacterial genomes. Traitar may help researchers in microbiology to pinpoint the traits of interest, reducing the amount of wet lab work required.},
+	URL = {http://msystems.asm.org/content/1/6/e00101-16},
+	eprint = {http://msystems.asm.org/content/1/6/e00101-16.full.pdf},
+	journal = {mSystems}
+}</citation>
+</citations>
 </tool>
