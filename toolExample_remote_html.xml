@@ -2,7 +2,7 @@
   <description> This is the Traitar web service for phenotyping bacteria based on their genome sequences.</description>
   <command detect_errors="exit_code"><![CDATA[
     #set $name_string=''
-    /home/galaxy/submit.sh traitar_html $mode $email $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
+    /home/galaxy/submit.sh traitar_html $mode "$email" $html_file $html_file.files_path $input2 "${",".join(map(str, $input))}"
     #for $input_part in $input:
     #if $name_string != '':
     #set $name_string += ','
