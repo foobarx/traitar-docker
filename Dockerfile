@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to use to Ubuntu
-FROM ubuntu:trusty 
+FROM ubuntu:xenial
 
 # ENV http_proxy http://rzproxy.helmholtz-hzi.de:3128
 # ENV https_proxy http://rzproxy.helmholtz-hzi.de:3128
